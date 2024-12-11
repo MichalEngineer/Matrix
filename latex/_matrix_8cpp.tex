@@ -1,0 +1,57 @@
+\doxysection{Dokumentacja pliku Matrix/\+Matrix.cpp}
+\hypertarget{_matrix_8cpp}{}\label{_matrix_8cpp}\index{Matrix/Matrix.cpp@{Matrix/Matrix.cpp}}
+{\ttfamily \#include "{}Matrix.\+h"{}}\newline
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{_matrix_8cpp_a711f1d52f70d592dcf2670c3fc7598a9}{operator+}} (int a, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{_matrix_8cpp_a4cdb71e0bc2dd8f4f07302f5bb1056a6}{operator\texorpdfstring{$\ast$}{*}}} (int a, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{_matrix_8cpp_ac7bc63f68e73ed544fc255561975cfac}{operator-\/}} (int a, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+std\+::ostream \& \mbox{\hyperlink{_matrix_8cpp_a625fd7d8de973b022b66a66b403c636d}{operator$<$$<$}} (std\+::ostream \&o, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_matrix_8cpp_a4cdb71e0bc2dd8f4f07302f5bb1056a6}\index{Matrix.cpp@{Matrix.cpp}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Matrix.cpp@{Matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{_matrix_8cpp_a4cdb71e0bc2dd8f4f07302f5bb1056a6} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator\texorpdfstring{$\ast$}{*} mno¿y macierz przez liczbê przyjmuje jeden argument typu double, który jest mno¿ony przez macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00391}{391}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{_matrix_8cpp_a711f1d52f70d592dcf2670c3fc7598a9}\index{Matrix.cpp@{Matrix.cpp}!operator+@{operator+}}
+\index{operator+@{operator+}!Matrix.cpp@{Matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{_matrix_8cpp_a711f1d52f70d592dcf2670c3fc7598a9} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator+ (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator+ dodaje liczbê do macierzy przyjmuje jeden argument typu double, który jest dodawany do macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00378}{378}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{_matrix_8cpp_ac7bc63f68e73ed544fc255561975cfac}\index{Matrix.cpp@{Matrix.cpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Matrix.cpp@{Matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{_matrix_8cpp_ac7bc63f68e73ed544fc255561975cfac} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator-\/ (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator-\/ odejmuje liczbê od macierzy przyjmuje jeden argument typu double, który jest odejmowany od macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00403}{403}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{_matrix_8cpp_a625fd7d8de973b022b66a66b403c636d}\index{Matrix.cpp@{Matrix.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Matrix.cpp@{Matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{_matrix_8cpp_a625fd7d8de973b022b66a66b403c636d} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} wypisanie macierzy przyjmuje dwa argumenty\+: std\+::ostream\& o -\/ strumieñ wyjœciowy, matrix\& m -\/ macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00485}{485}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+

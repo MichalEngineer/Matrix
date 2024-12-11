@@ -1,0 +1,529 @@
+\doxysection{Dokumentacja klasy matrix}
+\hypertarget{classmatrix}{}\label{classmatrix}\index{matrix@{matrix}}
+
+
+Klasa reprezentujaca macierz kwadratowa.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmatrix_a85978e41fe0877b998858c90f9476e14}{matrix}} (void)
+\item 
+\mbox{\hyperlink{classmatrix_a42349ef84ab5a2a1f52801c2a20cdf84}{matrix}} (int \mbox{\hyperlink{classmatrix_a9c6cbaf9d0d46a0a72649698325d245e}{n}})
+\item 
+\mbox{\hyperlink{classmatrix_aeefd2c5a07176e714e07a73e91ca4e8d}{matrix}} (int \mbox{\hyperlink{classmatrix_a9c6cbaf9d0d46a0a72649698325d245e}{n}}, int \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{classmatrix_a15411dc52976731b5bc53c366688b3e4}{matrix}} (\mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix_af888c11d72f0734e98744598c0150ae6}{\texorpdfstring{$\sim$}{\string~}matrix}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a7b944bf7f5476dace7ef21b5701fca36}{alokuj}} (int \mbox{\hyperlink{classmatrix_a9c6cbaf9d0d46a0a72649698325d245e}{n}})
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a31963b63c69325251b6c13f8255d9f41}{wstaw}} (int x, int y, int wartosc)
+\item 
+int \mbox{\hyperlink{classmatrix_a94ef42c920c59a1646ba53ed99335c3f}{pokaz}} (int x, int y)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a63445617eec9d42fef7c7a282cb9f851}{odwroc}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a180282e5416dbd46910b7b8aa605cd8b}{losuj}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a935f1073712587900e361af698db437c}{losuj}} (int x)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_aab5fade1c48b61a144ad8e25ae4f302a}{diagonalna}} (int \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a08fcafa4e7c0166bb321b517a4222d13}{diagonalna\+\_\+k}} (int k, int \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_aa297997cefcb0d7c3330f2f3389b1d1a}{kolumna}} (int x, int \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a768ffade13a139c0e0fb522c2c7ba4b2}{wiersz}} (int y, int \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a262c9c863adc27b315b7e70f807c3253}{przekatna}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_afc036f6e1c9a6872814924c2f1d505a0}{pod\+\_\+przekatna}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_aa2ada7403e667cf32590040ab737d98e}{nad\+\_\+przekatna}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a77692f56383d165debe1f9f1d1dff433}{szachownica}} (void)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a8326ab4e1686f57ab59a6700a583c2f9}{operator+}} (\mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a24c54954e216cb172b27ff8e12fe5fd8}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_acd9b9ed9da0ebab5e510dd93eaeed60c}{operator+}} (int a)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_afed596d22e75cad1eaaa6670660ac6d0}{operator\texorpdfstring{$\ast$}{*}}} (int a)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a37a81117b54beacd66c3df8bc7422fce}{operator-\/}} (int a)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a82067ae69b13c6cc657136eed6bb98c7}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a47d81e0d75a2eccd74ba4f9881e59a59}{operator-\/-\/}} (int)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a08c68be61d5f1778e80bdc40ccd559d5}{operator+=}} (int a)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a47ae9966139ba04f06029ccfd8e519b5}{operator-\/=}} (int a)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a14075d1440db6f6b9f9c7d5635392e4f}{operator\texorpdfstring{$\ast$}{*}=}} (int a)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_aedbf8a72f118aabe29a73bfb53fc7029}{operator+=}} (double a)
+\item 
+bool \mbox{\hyperlink{classmatrix_a82698971c516d1b04c0673b98ea3218a}{operator==}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+bool \mbox{\hyperlink{classmatrix_a205404680c7bfb0cca3c2d20a229e853}{operator$>$}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+bool \mbox{\hyperlink{classmatrix_a928e4e42fb07cd5327a359393bcf2530}{operator$<$}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{classmatrix_a9fbea43fdefaa1fd40aa74afeb3d8d5a}{wczytaj}} (const std\+::string \&nazwa)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmatrix_a9c6cbaf9d0d46a0a72649698325d245e}{n}}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmatrix_a90d8e1c42cd0beae208933d77bf5234e}{tab}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a711f1d52f70d592dcf2670c3fc7598a9}{operator+}} (int a, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a4cdb71e0bc2dd8f4f07302f5bb1056a6}{operator\texorpdfstring{$\ast$}{*}}} (int a, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_ac7bc63f68e73ed544fc255561975cfac}{operator-\/}} (int a, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\item 
+std\+::ostream \& \mbox{\hyperlink{classmatrix_a625fd7d8de973b022b66a66b403c636d}{operator$<$$<$}} (std\+::ostream \&o, \mbox{\hyperlink{classmatrix}{matrix}} \&m)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Klasa reprezentujaca macierz kwadratowa. 
+
+Klasa ta pozwala na tworzenie i manipulowanie macierzami kwadratowymi o dynamicznie alokowanej pamieci. Zawiera metody umozliwiajace wykonywanie roznych operacji na macierzach, takich jak dodawanie, mnozenie, wstawianie wartosci, czy odwracanie macierzy. 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8h_source_l00014}{14}} pliku \mbox{\hyperlink{_matrix_8h_source}{Matrix.\+h}}.
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{classmatrix_a85978e41fe0877b998858c90f9476e14}\index{matrix@{matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmatrix_a85978e41fe0877b998858c90f9476e14} 
+matrix\+::matrix (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Konstruktor domyœlny bez alokacji pamiêci
+
+nie przyjmuje ¿adnych argumentów i nie alokuje pamiêci na macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00003}{3}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a42349ef84ab5a2a1f52801c2a20cdf84}\index{matrix@{matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmatrix_a42349ef84ab5a2a1f52801c2a20cdf84} 
+matrix\+::matrix (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+Konstruktor przeci¹¿eniowy alokuje macierz o wymiarach n na n przyjmuje jeden argument typu int, który okreœla rozmiar macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00009}{9}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_aeefd2c5a07176e714e07a73e91ca4e8d}\index{matrix@{matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmatrix_aeefd2c5a07176e714e07a73e91ca4e8d} 
+matrix\+::matrix (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Konstruktor przeci¹¿eniowy alokuje pamiêæ i przepisuje dane z tabeli przyjmuje dwa argumenty\+: int n -\/ rozmiar macierzy, int\texorpdfstring{$\ast$}{*} t -\/ tablica z danymi 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00022}{22}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a15411dc52976731b5bc53c366688b3e4}\index{matrix@{matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmatrix_a15411dc52976731b5bc53c366688b3e4} 
+matrix\+::matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Konstruktor kopiuj¹cy przyjmuje jeden argument typu matrix, który jest kopiowany 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00040}{40}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_af888c11d72f0734e98744598c0150ae6}\index{matrix@{matrix}!````~matrix@{\texorpdfstring{$\sim$}{\string~}matrix}}
+\index{````~matrix@{\texorpdfstring{$\sim$}{\string~}matrix}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}matrix()}{\string~matrix()}}
+{\footnotesize\ttfamily \label{classmatrix_af888c11d72f0734e98744598c0150ae6} 
+matrix\+::\texorpdfstring{$\sim$}{\string~}matrix (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00056}{56}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\Hypertarget{classmatrix_a7b944bf7f5476dace7ef21b5701fca36}\index{matrix@{matrix}!alokuj@{alokuj}}
+\index{alokuj@{alokuj}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{alokuj()}{alokuj()}}
+{\footnotesize\ttfamily \label{classmatrix_a7b944bf7f5476dace7ef21b5701fca36} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::alokuj (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+Metoda alokuj alokuje pamiêæ na macierz Jeœli macierz nie ma zaalokowanej pamiêci to j¹ alokuje w wielkoœci n na n Jeœli ma zaalokowan¹ pamiêæ to rozwa¿a przypadki gdy jest jej mniej lub wiêcej ni¿ n na n przez co odpowiednio usuwa lub dodaje nadmiarowe lub brakuj¹ce komórki 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00067}{67}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_aab5fade1c48b61a144ad8e25ae4f302a}\index{matrix@{matrix}!diagonalna@{diagonalna}}
+\index{diagonalna@{diagonalna}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{diagonalna()}{diagonalna()}}
+{\footnotesize\ttfamily \label{classmatrix_aab5fade1c48b61a144ad8e25ae4f302a} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::diagonalna (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Metoda diagonalna po przek¹tnej s¹ wpisane dane z tabeli, a pozosta³e elementy s¹ równe 0 przyjmuje jeden argument typu int\texorpdfstring{$\ast$}{*}, który jest tablic¹ z danymi które zostan¹ wpisane na przek¹tn¹ 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00186}{186}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a08fcafa4e7c0166bb321b517a4222d13}\index{matrix@{matrix}!diagonalna\_k@{diagonalna\_k}}
+\index{diagonalna\_k@{diagonalna\_k}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{diagonalna\_k()}{diagonalna\_k()}}
+{\footnotesize\ttfamily \label{classmatrix_a08fcafa4e7c0166bb321b517a4222d13} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::diagonalna\+\_\+k (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Metoda diagonalna\+\_\+k po przek¹tnej s¹ wpisane dane z tabeli przesuniête o k, a pozosta³e elementy s¹ równe 0 przyjmuje dwa argumenty\+: int k -\/ przesuniêcie przek¹tnej, int\texorpdfstring{$\ast$}{*} t -\/ tablica z danymi 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00194}{194}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_aa297997cefcb0d7c3330f2f3389b1d1a}\index{matrix@{matrix}!kolumna@{kolumna}}
+\index{kolumna@{kolumna}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{kolumna()}{kolumna()}}
+{\footnotesize\ttfamily \label{classmatrix_aa297997cefcb0d7c3330f2f3389b1d1a} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::kolumna (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Metoda kolumna przepisuje dane z tabeli do kolumny, któr¹ wskazuje zmienna x przyjmuje dwa argumenty\+: int x -\/ kolumna, int\texorpdfstring{$\ast$}{*} t -\/ tablica z danymi 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00219}{219}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a935f1073712587900e361af698db437c}\index{matrix@{matrix}!losuj@{losuj}}
+\index{losuj@{losuj}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmatrix_a935f1073712587900e361af698db437c} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::losuj (\begin{DoxyParamCaption}\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+Metoda losuj wype³nia macierz cyframi od 0 do 9 elementy macierzy. Zmienna x okreœla ile cyfr bêdziemy losowaæ. przyjmuje jeden argument typu int, który okreœla ile cyfr bêdziemy losowaæ 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00177}{177}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a180282e5416dbd46910b7b8aa605cd8b}\index{matrix@{matrix}!losuj@{losuj}}
+\index{losuj@{losuj}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmatrix_a180282e5416dbd46910b7b8aa605cd8b} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::losuj (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Metoda losuj wype³nia macierz cyframi od 0 do 9 wszystkie elementy macierzy nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00165}{165}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_aa2ada7403e667cf32590040ab737d98e}\index{matrix@{matrix}!nad\_przekatna@{nad\_przekatna}}
+\index{nad\_przekatna@{nad\_przekatna}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{nad\_przekatna()}{nad\_przekatna()}}
+{\footnotesize\ttfamily \label{classmatrix_aa2ada7403e667cf32590040ab737d98e} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::nad\+\_\+przekatna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Metoda nad\+\_\+przekatna uzupe³nia macierz\+: 1-\/nad przek¹tn¹, 0-\/pod przek¹tn¹ i po przek¹tnej, nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00261}{261}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a63445617eec9d42fef7c7a282cb9f851}\index{matrix@{matrix}!odwroc@{odwroc}}
+\index{odwroc@{odwroc}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{odwroc()}{odwroc()}}
+{\footnotesize\ttfamily \label{classmatrix_a63445617eec9d42fef7c7a282cb9f851} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::odwroc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Metoda odwroc zamienia wiersze z kolumnami nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00134}{134}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_afed596d22e75cad1eaaa6670660ac6d0}\index{matrix@{matrix}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmatrix_afed596d22e75cad1eaaa6670660ac6d0} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator\texorpdfstring{$\ast$}{*} mno¿y macierz przez liczbê przyjmuje jeden argument typu int, który jest mno¿ony przez macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00354}{354}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a24c54954e216cb172b27ff8e12fe5fd8}\index{matrix@{matrix}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmatrix_a24c54954e216cb172b27ff8e12fe5fd8} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator-\/ odejmuje dwie macierze przyjmuje jeden argument typu matrix, który jest odejmowany od macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00326}{326}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a14075d1440db6f6b9f9c7d5635392e4f}\index{matrix@{matrix}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \label{classmatrix_a14075d1440db6f6b9f9c7d5635392e4f} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator\texorpdfstring{$\ast$}{*}= ka¿dy element w macierzy mno¿ymy o „a” przyjmuje jeden argument typu int, który jest mno¿ony przez macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00461}{461}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_acd9b9ed9da0ebab5e510dd93eaeed60c}\index{matrix@{matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmatrix_acd9b9ed9da0ebab5e510dd93eaeed60c} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator+ (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator+ dodaje liczbê do macierzy przyjmuje jeden argument typu int, który jest dodawany do macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00342}{342}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a8326ab4e1686f57ab59a6700a583c2f9}\index{matrix@{matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmatrix_a8326ab4e1686f57ab59a6700a583c2f9} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator+ dodaje dwie macierze przyjmuje jeden argument typu matrix, który jest dodawany do macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00314}{314}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a82067ae69b13c6cc657136eed6bb98c7}\index{matrix@{matrix}!operator++@{operator++}}
+\index{operator++@{operator++}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \label{classmatrix_a82067ae69b13c6cc657136eed6bb98c7} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})}
+
+Metoda operator++ wszystkie liczby powiêkszone o 1 nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00415}{415}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_aedbf8a72f118aabe29a73bfb53fc7029}\index{matrix@{matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmatrix_aedbf8a72f118aabe29a73bfb53fc7029} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator+= (\begin{DoxyParamCaption}\item[{double}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator+= ka¿dy element w macierzy powiêkszamy o „a” przyjmuje jeden argument typu double, który jest dodawany do macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00472}{472}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a08c68be61d5f1778e80bdc40ccd559d5}\index{matrix@{matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmatrix_a08c68be61d5f1778e80bdc40ccd559d5} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator+= (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator+= ka¿dy element w macierzy powiêkszamy o „a” przyjmuje jeden argument typu int, który jest dodawany do macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00439}{439}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a37a81117b54beacd66c3df8bc7422fce}\index{matrix@{matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{classmatrix_a37a81117b54beacd66c3df8bc7422fce} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator-\/ (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator-\/ odejmuje liczbê od macierzy przyjmuje jeden argument typu int, który jest odejmowany od macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00366}{366}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a47d81e0d75a2eccd74ba4f9881e59a59}\index{matrix@{matrix}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily \label{classmatrix_a47d81e0d75a2eccd74ba4f9881e59a59} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})}
+
+Metoda operator-\/-\/ wszystkie liczby pomniejszone o 1 nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00427}{427}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a47ae9966139ba04f06029ccfd8e519b5}\index{matrix@{matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{classmatrix_a47ae9966139ba04f06029ccfd8e519b5} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::operator-\/= (\begin{DoxyParamCaption}\item[{int}]{a}{}\end{DoxyParamCaption})}
+
+Metoda operator-\/= ka¿dy element w macierzy pomniejszamy o „a” przyjmuje jeden argument typu int, który jest odejmowany od macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00450}{450}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a928e4e42fb07cd5327a359393bcf2530}\index{matrix@{matrix}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{classmatrix_a928e4e42fb07cd5327a359393bcf2530} 
+bool matrix\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator\texorpdfstring{$<$}{<} sprawdza, czy ka¿dy element macierzy spe³nia nierównoœæ ??(??, ??) \texorpdfstring{$<$}{<} ??(??, ??).Jeœli tak, to mo¿emy powiedzieæ, ¿e macierz jest mniejsza, w przeciwnym wypadku nie mo¿emy stwierdziæ,¿e macierz jest mniejsza. przyjmuje jeden argument typu matrix, który jest porównywany z macierz¹ 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00533}{533}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a82698971c516d1b04c0673b98ea3218a}\index{matrix@{matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classmatrix_a82698971c516d1b04c0673b98ea3218a} 
+bool matrix\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator== sprawdza, czy ka¿dy element macierzy spe³nia równoœæ ??(??, ??) = ??(??, ??) A = \texorpdfstring{$\vert$}{|} 1 2 \texorpdfstring{$\vert$}{|} B = \texorpdfstring{$\vert$}{|} 1 2\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}3 4\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}3 4 \texorpdfstring{$\vert$}{|} jeœli nie, to nie mo¿emy mówiæ, ¿e macierze s¹ równe przyjmuje jeden argument typu matrix, który jest porównywany z macierz¹ 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00497}{497}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a205404680c7bfb0cca3c2d20a229e853}\index{matrix@{matrix}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{classmatrix_a205404680c7bfb0cca3c2d20a229e853} 
+bool matrix\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+Metoda operator\texorpdfstring{$>$}{>} sprawdza, czy ka¿dy element macierzy spe³nia nierównoœæ ??(??, ??) \texorpdfstring{$>$}{>} ??(??, ??).Jeœli tak, to mo¿emy powiedzieæ, ¿e macierz jest wiêksza, w przeciwnym wypadku nie mo¿emy stwierdziæ,¿e macierz jest wiêksza. przyjmuje jeden argument typu matrix, który jest porównywany z macierz¹ 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00515}{515}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_afc036f6e1c9a6872814924c2f1d505a0}\index{matrix@{matrix}!pod\_przekatna@{pod\_przekatna}}
+\index{pod\_przekatna@{pod\_przekatna}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{pod\_przekatna()}{pod\_przekatna()}}
+{\footnotesize\ttfamily \label{classmatrix_afc036f6e1c9a6872814924c2f1d505a0} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::pod\+\_\+przekatna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Metoda pod\+\_\+przekatna uzupe³nia macierz\+: 1-\/pod przek¹tn¹, 0-\/nad przek¹tn¹ i po przek¹tnej, nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00243}{243}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a94ef42c920c59a1646ba53ed99335c3f}\index{matrix@{matrix}!pokaz@{pokaz}}
+\index{pokaz@{pokaz}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{pokaz()}{pokaz()}}
+{\footnotesize\ttfamily \label{classmatrix_a94ef42c920c59a1646ba53ed99335c3f} 
+int matrix\+::pokaz (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Metoda pokaz zwraca wartoœæ elementu x, y przyjmuje dwa argumenty\+: int x -\/ wiersz, int y -\/ kolumna 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00130}{130}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a262c9c863adc27b315b7e70f807c3253}\index{matrix@{matrix}!przekatna@{przekatna}}
+\index{przekatna@{przekatna}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{przekatna()}{przekatna()}}
+{\footnotesize\ttfamily \label{classmatrix_a262c9c863adc27b315b7e70f807c3253} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::przekatna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Metoda przekatna uzupe³nia macierz\+: 1-\/na przek¹tnej, 0-\/poza przek¹tn¹, nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00235}{235}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a77692f56383d165debe1f9f1d1dff433}\index{matrix@{matrix}!szachownica@{szachownica}}
+\index{szachownica@{szachownica}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{szachownica()}{szachownica()}}
+{\footnotesize\ttfamily \label{classmatrix_a77692f56383d165debe1f9f1d1dff433} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::szachownica (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Metoda szachownica uzupelnia macierz w ten sposób dla n=4\+: 0101 1010 0101 1010 nie przyjmuje ¿adnych argumentów 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00279}{279}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a9fbea43fdefaa1fd40aa74afeb3d8d5a}\index{matrix@{matrix}!wczytaj@{wczytaj}}
+\index{wczytaj@{wczytaj}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{wczytaj()}{wczytaj()}}
+{\footnotesize\ttfamily \label{classmatrix_a9fbea43fdefaa1fd40aa74afeb3d8d5a} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::wczytaj (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nazwa}{}\end{DoxyParamCaption})}
+
+Metoda wczytaj wczytuje macierz z pliku o nazwie „nazwa” przyjmuje jeden argument typu string, który jest nazw¹ pliku 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00551}{551}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a768ffade13a139c0e0fb522c2c7ba4b2}\index{matrix@{matrix}!wiersz@{wiersz}}
+\index{wiersz@{wiersz}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{wiersz()}{wiersz()}}
+{\footnotesize\ttfamily \label{classmatrix_a768ffade13a139c0e0fb522c2c7ba4b2} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::wiersz (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Metoda wiersz przepisuje dane z tabeli do wiersza, który wskazuje zmienna x przyjmuje dwa argumenty\+: int y -\/ wiersz, int\texorpdfstring{$\ast$}{*} t -\/ tablica z danymi 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00227}{227}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a31963b63c69325251b6c13f8255d9f41}\index{matrix@{matrix}!wstaw@{wstaw}}
+\index{wstaw@{wstaw}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{wstaw()}{wstaw()}}
+{\footnotesize\ttfamily \label{classmatrix_a31963b63c69325251b6c13f8255d9f41} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& matrix\+::wstaw (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{wartosc}{}\end{DoxyParamCaption})}
+
+Metoda wstaw wstawia wartoœæ do macierzy przyjmuje trzy argumenty\+: int x -\/ wiersz, int y -\/ kolumna, int wartosc -\/ wartoœæ 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00125}{125}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja przyjaciÃ³Å‚ i powiÄ…zanych symboli}
+\Hypertarget{classmatrix_a4cdb71e0bc2dd8f4f07302f5bb1056a6}\index{matrix@{matrix}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}}{operator*}}
+{\footnotesize\ttfamily \label{classmatrix_a4cdb71e0bc2dd8f4f07302f5bb1056a6} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Metoda operator\texorpdfstring{$\ast$}{*} mno¿y macierz przez liczbê przyjmuje jeden argument typu double, który jest mno¿ony przez macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00391}{391}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a711f1d52f70d592dcf2670c3fc7598a9}\index{matrix@{matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \label{classmatrix_a711f1d52f70d592dcf2670c3fc7598a9} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator+ (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Metoda operator+ dodaje liczbê do macierzy przyjmuje jeden argument typu double, który jest dodawany do macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00378}{378}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_ac7bc63f68e73ed544fc255561975cfac}\index{matrix@{matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \label{classmatrix_ac7bc63f68e73ed544fc255561975cfac} 
+\mbox{\hyperlink{classmatrix}{matrix}} operator-\/ (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Metoda operator-\/ odejmuje liczbê od macierzy przyjmuje jeden argument typu double, który jest odejmowany od macierzy 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00403}{403}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+\Hypertarget{classmatrix_a625fd7d8de973b022b66a66b403c636d}\index{matrix@{matrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classmatrix_a625fd7d8de973b022b66a66b403c636d} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o}{, }\item[{\mbox{\hyperlink{classmatrix}{matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Metoda operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} wypisanie macierzy przyjmuje dwa argumenty\+: std\+::ostream\& o -\/ strumieñ wyjœciowy, matrix\& m -\/ macierz 
+
+Definicja w linii \mbox{\hyperlink{_matrix_8cpp_source_l00485}{485}} pliku \mbox{\hyperlink{_matrix_8cpp_source}{Matrix.\+cpp}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{classmatrix_a9c6cbaf9d0d46a0a72649698325d245e}\index{matrix@{matrix}!n@{n}}
+\index{n@{n}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \label{classmatrix_a9c6cbaf9d0d46a0a72649698325d245e} 
+int matrix\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii \mbox{\hyperlink{_matrix_8h_source_l00017}{17}} pliku \mbox{\hyperlink{_matrix_8h_source}{Matrix.\+h}}.
+
+\Hypertarget{classmatrix_a90d8e1c42cd0beae208933d77bf5234e}\index{matrix@{matrix}!tab@{tab}}
+\index{tab@{tab}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{tab}{tab}}
+{\footnotesize\ttfamily \label{classmatrix_a90d8e1c42cd0beae208933d77bf5234e} 
+int\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} matrix\+::tab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definicja w linii \mbox{\hyperlink{_matrix_8h_source_l00018}{18}} pliku \mbox{\hyperlink{_matrix_8h_source}{Matrix.\+h}}.
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z plikÃ³w\+:\begin{DoxyCompactItemize}
+\item 
+Matrix/\mbox{\hyperlink{_matrix_8h}{Matrix.\+h}}\item 
+Matrix/\mbox{\hyperlink{_matrix_8cpp}{Matrix.\+cpp}}\end{DoxyCompactItemize}
