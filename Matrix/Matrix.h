@@ -45,6 +45,6 @@ public:
 	bool operator==(const matrix& m); //sprawdza, czy ka¿dy element macierzy spe³nia równoœæ ??(??, ??) = ??(??, ??) A = | 1 2 | B = | 1 2| |3 4| |3 4 | jeœli nie, to nie mo¿emy mówiæ, ¿e macierze s¹ równe,
 	bool operator>(const matrix& m); //operator wiêkszoœci sprawdza, czy ka¿dy element macierzy spe³nia nierównoœæ ??(??, ??) > ??(??, ??).Jeœli tak, to mo¿emy powiedzieæ, ¿e macierz jest wiêksza, w przeciwnym wypadku nie mo¿emy stwierdziæ,¿e macierz jest wiêksza.
 	bool operator<(const matrix& m); //tak jak wy¿ej tylko operator mniejszoœci. Na marginesie macierzy mo¿emy nie daæ rady okreœliæ, ¿e jest równa, mniejsza i wiêksza, wtedy mówimy ¿e jest ró¿na
-	matrix& wczytaj(const std::string& nazwa);
+	matrix& wczytaj(const std::string& nazwa); //wczytuje macierz z pliku o nazwie „nazwa”
 };
 

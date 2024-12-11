@@ -6,13 +6,17 @@ matrix::matrix(void)  //<-- konstruktor domyślny bez alokacji pamięci
 	tab = nullptr;  //<-- wskaźnik do macierzy
 }
 
-matrix::matrix(int n)  //<-- konstruktor przeci��eniowy alokuje macierz o wymiarach n na n
+matrix::matrix(int n)  //<-- konstruktor przeciążeniowy alokuje macierz o wymiarach n na n
 {
 	this->n = n; //<-- rozmiar macierzy
-	tab = new int* [n];  //<-- wska�nik do macierzy
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
+	tab = new int* [n];  //<-- wskaźnik do macierzy
+	for (int i = 0; i < n; i++) //<-- pętla przechodząca przez elementy macierzy
 	{
 		tab[i] = new int[n];  //<-- przypisywanie elementu macierzy do elementu macierzy
+		for (int j = 0; j < n; j++) //<-- pętla przechodząca przez elementy macierzy
+		{
+			tab[i][j] = 0; //<-- inicjalizacja elementu macierzy wartością 0
+		}
 	}
 }
 matrix::matrix(int n, int* t)  //<-- konstruktor przeci��eniowy alokuje pami�� i przepisuje dane z tabeli
@@ -189,14 +193,14 @@ matrix& matrix::diagonalna_k(int k, int* t) //<-- po przek�tnej s� wpisane d
 		for (int i = 0; i < n - k; i++) //<-- p�tla przechodz�ca przez elementy macierzy
 		{
 			tab[i][i + k] = t[i]; //<-- przypisanie elementu macierzy do elementu macierzy
-		}
+		} 
 	}
 	else //<-- sprawdzenie czy k jest mniejsze od 0
-	{
+	{ 
 		for (int i = 0; i < n + k; i++) //<-- p�tla przechodz�ca przez elementy macierzy
 		{
 			tab[i - k][i] = t[i]; //<-- przypisanie elementu macierzy do elementu macierzy
-		}
+		} 
 	}
 	return *this; //<-- zwracamy macierz
 }
@@ -241,7 +245,7 @@ matrix& matrix::pod_przekatna(void) //<-- uzupełnia macierz: 1-pod przekątną,
 		}
 	}
 	return *this; //<-- zwracamy macierz
-}
+} 
 matrix& matrix::nad_przekatna(void) //<-- uzupełnia macierz: 1-nad przekątną, 0-pod przekątną i po przekątnej,
 {
 	for (int i = 0; i < n; i++) //<-- pętla przechodząca przez elementy macierzy
@@ -327,7 +331,7 @@ matrix& matrix::operator+(int a) //<-- dodawanie liczby do macierzy
 {
 	matrix* temp = new matrix(n); //<-- nowa macierz
 	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
-	{
+	{ 
 		for (int j = 0; j < n; j++) //<-- p�tla przechodz�ca przez elementy macierzy
 		{
 			temp->tab[i][j] = tab[i][j] + a; //<-- dodanie elementu macierzy do a
@@ -461,7 +465,7 @@ matrix& matrix::operator+=(double a) //<-- wszystkie cyfry s� powi�kszone o 
 		{
 			tab[i][j] += b; //<-- dodanie cz�ci ca�kowitej do elementu macierzy
 		}
-
+		
 	}
 	return *this; //<-- zwracamy macierz
 }
@@ -541,6 +545,7 @@ matrix& matrix::wczytaj(const std::string& nazwa)  //<-- wczytuje macierz z plik
 	}
 	int n;  //<-- rozmiar macierzy
 	plik >> n; //<-- wczytanie rozmiaru macierzy
+	this->alokuj(n);  //<-- alokacja pami�ci
 	if (n <= 0)  //<-- sprawdzenie czy rozmiar macierzy jest wi�kszy od zera
 	{
 		std::cout << "Niepoprawny rozmiar macierzy" << std::endl; //<-- komunikat o b��dzie
@@ -551,7 +556,7 @@ matrix& matrix::wczytaj(const std::string& nazwa)  //<-- wczytuje macierz z plik
 	{
 		for (int j = 0; j < n; j++) // <--- Petla wczytujaca wartosci do macierzy
 		{
-			plik >> tab[i][j]; // <--- Wczytanie wartosci do macierzy
+			plik >> tab[i][j]; // <--- Wczytanie wartosci do macierzye
 		}
 	}
 
