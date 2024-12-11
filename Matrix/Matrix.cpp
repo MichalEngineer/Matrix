@@ -37,29 +37,32 @@ matrix::matrix(int n, int* t)  //<-- konstruktor przeci��eniowy alokuje pami
 		}
 	}
 }
-matrix::matrix(matrix& m) //<-- konstruktor kopiuj�cy
-{
-	n = m.n; //<-- przypisanie elementu macierzy do elementu macierzy
-	tab = new int* [n]; //<-- nowa macierz
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
-	{
-		tab[i] = new int[n]; //<-- nowa macierz
-	}
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
-	{
-		for (int j = 0; j < n; j++) //<-- p�tla przechodz�ca przez elementy macierzy
-		{
-			tab[i][j] = m.tab[i][j]; //<-- przypisanie elementu macierzy do elementu macierzy
+matrix::matrix(matrix& m) {
+	this->n = m.n; //<-- przypisanie elementu macierzy do elementu macierzy
+	if (m.tab != nullptr) { //<-- sprawdzenie czy tab jest równe nullptr
+		tab = new int* [n]; //<-- nowa macierz
+		for (int i = 0; i < n; i++) { //<-- p�tla przechodz�ca przez elementy macierzy
+			tab[i] = new int[n]; //<-- nowa macierz
+			for (int j = 0; j < n; j++) { //<-- p�tla przechodz�ca przez elementy macierzy
+				tab[i][j] = m.tab[i][j]; //<-- przypisanie elementu macierzy do elementu macierzy
+			}
 		}
 	}
+	else { //<-- je�li tab nie jest r�wne nullptr
+		tab = nullptr; //<-- przypisanie elementu macierzy do elementu macierzy
+	}
 }
+
 matrix::~matrix(void) //<-- destruktor
 {
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
-	{
-		delete[] tab[i]; //<-- usuwanie elementu macierzy
+    if (tab) {  // <--- Sprawdzenie czy macierz ma zaalokowana pamiec
+	for (int i = 0; i < n; ++i) {  // <--- Petla zwalniajaca pamiec
+		delete[] tab[i]; // <--- Zwalnianie pamieci
 	}
-	delete[] tab; //<-- usuwanie elementu macierzy
+	delete[] tab; // <--- Zwalnianie pamieci
+	tab = nullptr;  // <--- Ustawianie wskaznika na nullptr
+	n = 0; // <--- Zerowanie rozmiaru
+}
 }
 matrix& matrix::alokuj(int n) //<-- je�li macierz nie ma zaalokowanej pami�ci to j� alokuje w wielko�ci n na n, je�li macierz ma zaalokowan� pami�� to sprawdza czy rozmiar alokacji jest r�wny zdeklarowanemu rozmiarowi.W przypadku gdy tej pami�ci jest mniej, pami�� ma zosta� zwolniona i zaalokowana ponownie w ��danym rozmiarze. W przypadku gdy tej pami�ci jest wi�cej pozostawi� alokacj� bez zmian.
 {
@@ -130,26 +133,35 @@ int matrix::pokaz(int x, int y) //<-- zwraca warto�� elementu x, y
 }
 matrix& matrix::odwroc(void) //<-- zamienia wiersze z kolumnami
 {
+	if (tab == nullptr || n <= 0) {
+		// Jeśli tab jest niezainicjalizowany lub n jest nieprawidłowe, zwracamy macierz bez zmian
+		return *this;
+	}
+
 	int** temp = new int* [n]; //<-- nowa macierz
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
+	for (int i = 0; i < n; i++) //<-- pętla przechodząca przez elementy macierzy
 	{
 		temp[i] = new int[n]; //<-- nowa macierz
 	}
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
+
+	for (int i = 0; i < n; i++) //<-- pętla przechodząca przez elementy macierzy
 	{
-		for (int j = 0; j < n; j++) //<-- p�tla przechodz�ca przez elementy macierzy
+		for (int j = 0; j < n; j++) //<-- pętla przechodząca przez elementy macierzy
 		{
 			temp[i][j] = tab[j][i]; //<-- zamiana wierszy z kolumnami
 		}
 	}
-	for (int i = 0; i < n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
+
+	for (int i = 0; i < n; i++) //<-- pętla przechodząca przez elementy macierzy
 	{
 		delete[] tab[i]; //<-- usuwanie elementu macierzy
 	}
 	delete[] tab; //<-- usuwanie elementu macierzy
+
 	tab = temp; //<-- przypisanie elementu macierzy do elementu macierzy
 	return *this; //<-- zwracamy macierz
 }
+
 matrix& matrix::losuj(void) //<-- wype�niamy cyframi od 0 do 9 wszystkie elementy macierzy
 {
 	srand(time(NULL)); //<-- losowanie
@@ -365,36 +377,37 @@ matrix& matrix::operator-(int a) //<-- odejmowanie liczby od macierzy
 }
 matrix operator+(int a, matrix& m) //<-- dodawanie liczby do macierzy
 {
-	matrix temp(m.n); //<-- nowa macierz
-	for (int i = 0; i < m.n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
+	matrix temp(m); //<-- nowa macierz
+	for (int i = 0; i < m.n; i++) //<-- pętla przechodząca przez elementy macierzy
 	{
-		for (int j = 0; j < m.n; j++) //<-- p�tla przechodz�ca przez elementy macierzy
+		for (int j = 0; j < m.n; j++) //<-- pętla przechodząca przez elementy macierzy
 		{
-			temp.tab[i][j] = m.tab[i][j] + a; //<-- dodanie elementu macierzy do a
+			temp.tab[i][j] = a + temp.tab[i][j]; //<-- dodanie elementu macierzy do a
 		}
 	}
 	return temp; //<-- zwracamy macierz
 }
+
 matrix operator*(int a, matrix& m) //<-- mno�enie macierzy przez liczb�
 {
-	matrix temp(m.n); //<-- nowa macierz
+	matrix temp(m); //<-- nowa macierz
 	for (int i = 0; i < m.n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
 	{
 		for (int j = 0; j < m.n; j++) //<-- p�tla przechodz�ca przez elementy macierzy
 		{
-			temp.tab[i][j] = m.tab[i][j] * a; //<-- mno�enie elementu macierzy przez a
+			temp.tab[i][j] =a* temp.tab[i][j]; //<-- mno�enie elementu macierzy przez a
 		}
 	}
 	return temp; //<-- zwracamy macierz
 }
 matrix operator-(int a, matrix& m) //<-- odejmowanie macierzy od liczby
 {
-	matrix temp(m.n); //<-- nowa macierz
+	matrix temp(m); //<-- nowa macierz
 	for (int i = 0; i < m.n; i++) //<-- p�tla przechodz�ca przez elementy macierzy
 	{
 		for (int j = 0; j < m.n; j++) //<-- p�tla przechodz�ca przez elementy macierzy
 		{
-			temp.tab[i][j] = m.tab[i][j] - a; //<-- odejmowanie elementu macierzy od a
+			temp.tab[i][j] =a- temp.tab[i][j] ; //<-- odejmowanie elementu macierzy od a
 		}
 	}
 	return temp; //<-- zwracamy macierz

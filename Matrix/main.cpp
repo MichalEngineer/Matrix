@@ -34,7 +34,7 @@ int main()
 		matrix m9(m6);
 		m9.odwroc(); // Testowanie metody odwroc
 		std::cout << "Test metody odwroc: \n" << m9 << std::endl;
-		// Nie działa poprawnie
+		// Działa poprawnie
 		matrix m10(30);
 		m10.losuj(); // Testowanie metody losuj
 		std::cout << "Test metody losuj: \n" << m10 << std::endl;
@@ -146,17 +146,16 @@ int main()
 			std::cout << "Macierz 1 nie jest mniejsza od macierzy 2" << std::endl;
 		}
 		// Działa poprawnie
-		matrix m37(30);
+		matrix m37(m6);
 		m37++; // Testowanie operatora ++
 		std::cout << "Test operatora ++: \n" << m37 << std::endl;
-		// Nie działa poprawnie
-		matrix m38(30);
+		// Działa poprawnie
+		matrix m38(m6);
 		m38--; // Testowanie operatora --
 		std::cout << "Test operatora --: \n" << m38 << std::endl;
-		// Nie działa poprawnie 
+		// Działa poprawnie 
 		std::cout << std::endl << m10<<std::endl;// Testowanie operatora<<
 		// Działa poprawnie
-
 
 
 
