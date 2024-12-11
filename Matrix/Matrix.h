@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-#include <iostream>				
+#include <iostream>		
+#include <fstream>
 class matrix
 {
 private:
