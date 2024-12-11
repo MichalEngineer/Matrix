@@ -70,3 +70,90 @@ int main()
     m1.przekatna();
     std::cout << "m1 po przekatna: " << std::endl;
     std::cout << m1;
+
+    // Testowanie metody pod_przekatna
+    m1.pod_przekatna();
+    std::cout << "m1 po pod_przekatna: " << std::endl;
+    std::cout << m1;
+
+    // Testowanie metody nad_przekatna
+    m1.nad_przekatna();
+    std::cout << "m1 po nad_przekatna: " << std::endl;
+    std::cout << m1;
+
+    // Testowanie metody szachownica
+    m1.szachownica();
+    std::cout << "m1 po szachownica: " << std::endl;
+    std::cout << m1;
+
+    // Testowanie operatorów
+    matrix m4 = m2 + m3;
+    std::cout << "m2 + m3: " << std::endl;
+    std::cout << m4;
+
+    matrix m5 = m2 * m3;
+    std::cout << "m2 * m3: " << std::endl;
+    std::cout << m5;
+
+    matrix m6 = m2 + 5;
+    std::cout << "m2 + 5: " << std::endl;
+    std::cout << m6;
+
+    matrix m7 = m2 * 2;
+    std::cout << "m2 * 2: " << std::endl;
+    std::cout << m7;
+
+    matrix m8 = m2 - 3;
+    std::cout << "m2 - 3: " << std::endl;
+    std::cout << m8;
+
+
+    m2++;
+    std::cout << "m2++: " << std::endl;
+    std::cout << m2;
+
+    m2--;
+    std::cout << "m2--: " << std::endl;
+    std::cout << m2;
+
+    m2 += 5;
+    std::cout << "m2 += 5: " << std::endl;
+    std::cout << m2;
+
+    m2 -= 3;
+    std::cout << "m2 -= 3: " << std::endl;
+    std::cout << m2;
+
+    m2 *= 2;
+    std::cout << "m2 *= 2: " << std::endl;
+    std::cout << m2;
+
+    m2 += 2.5;
+    std::cout << "m2 += 2.5: " << std::endl;
+    std::cout << m2;
+
+    // Testowanie operatorów porównania
+    if (m2 == m3)
+        std::cout << "m2 jest równe m3" << std::endl;
+    else
+        std::cout << "m2 nie jest równe m3" << std::endl;
+
+    if (m2 > m3)
+        std::cout << "m2 jest większe od m3" << std::endl;
+    else
+        std::cout << "m2 nie jest większe od m3" << std::endl;
+
+    if (m2 < m3)
+        std::cout << "m2 jest mniejsze od m3" << std::endl;
+    else
+        std::cout << "m2 nie jest mniejsze od m3" << std::endl;
+
+    // Testowanie metody wczytaj
+    m1.wczytaj("matrix.txt");
+    std::cout << "m1 po wczytaniu z pliku: " << std::endl;
+    std::cout << m1;
+
+    return 0;
+}
+
+
